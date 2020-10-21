@@ -1,0 +1,17 @@
+@import '~assets/style/variables';
+
+.PageLayout {
+  padding: 0.5em;
+  &-content {
+    background: white;
+    max-width: $sm;
+    margin: 0 auto;
+    padding: 1em;
+    border-radius: 0.5em;
+    &-title {
+      line-height: 1;
+      border-bottom: 1px solid $grey-200;
+      padding-bottom: 0.5em;
+    }
+  }
+}

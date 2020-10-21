@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-prettier/recommended"
+  ],
+  "plugins": ["stylelint-scss"],
+  "$schema": "http://json.schemastore.org/stylelintrc.json",
+  "rules": {
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  },
+  "syntax": "scss"
+}

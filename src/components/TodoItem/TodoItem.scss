@@ -1,0 +1,40 @@
+@import '~assets/style/variables';
+
+.TodoItem {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid $grey-100;
+  &-meta {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+
+    &-fav {
+      margin-left: auto;
+      margin-right: 0.5em;
+      .anticon {
+        color: rgb(11, 109, 255);
+      }
+    }
+
+    &-remove {
+      margin-left: 0.5em;
+      .anticon {
+        color: red;
+      }
+    }
+
+    .anticon {
+      cursor: pointer;
+      padding: 0.3em;
+      border-radius: 50%;
+      font-size: 16px;
+      &:hover {
+        background: $grey-200;
+      }
+    }
+  }
+
+  &-content {
+    margin-bottom: 0.2em;
+  }
+}

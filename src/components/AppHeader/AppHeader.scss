@@ -1,0 +1,40 @@
+@import '~assets/style/variables';
+
+.AppHeader {
+  background: white;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: $md;
+    margin: 0 auto;
+    padding: 0.5em;
+    &-title {
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    &-menu {
+      display: flex;
+      align-items: center;
+      a {
+        padding: 0 0.5em;
+
+        &.active {
+          .anticon {
+            color: $grey-700;
+          }
+        }
+        .anticon {
+          color: $grey-500;
+          font-size: 24px;
+          cursor: pointer;
+          
+        }
+      }
+      button {
+        margin-left: 0.5em;
+      }
+    }
+  }
+}
