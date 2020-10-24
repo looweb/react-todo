@@ -1,7 +1,9 @@
 .TodoListFilters {
   display: flex;
   margin-bottom: 1em;
-  &-fav {
+  flex-wrap: wrap;
+  &-ready {
     margin-right: 0.5em;
+    margin-bottom: 0.5em;
   } 
 }
