@@ -20,14 +20,14 @@ function App() {
 
   return (
     <AppContext.Provider value={{ todoList, setTodoList }}>
-      <Router>
+      <Router basename="/to-do">
         <div className="App">
           <div className="App-header">
             <AppHeader />
           </div>
           <Switch>
-            <Route exact path="/" render={() => <All />} />
-            <Route exact path="/fav" render={() => <Favorites />} />
+            <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => <All />} />
+            <Route exact path={`${process.env.PUBLIC_URL}/fav`} render={() => <Favorites />} />
           </Switch>
         </div>
       </Router>
