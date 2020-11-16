@@ -14,16 +14,16 @@ const TodoList = ({ list }) => {
   const [readyFilter, setReadyFilter] = useState('all');
   const [sinceFilter, setSinceFilter] = useState(null);
   const [toFilter, setToFilter] = useState(null);
-  const [filteredList, setFilteredList] = useState(todoList);
+  const [filteredList, setFilteredList] = useState(list);
 
   useEffect(() => {
-    let currentList = todoList.slice();
+    let currentList = list.slice();
     if (readyFilter === 'ready') {
       currentList = currentList.filter((item) => item.isReady);
     } else if (readyFilter === 'not-ready') {
       currentList = currentList.filter((item) => !item.isReady);
     } else {
-      currentList = todoList.slice();
+      currentList = list.slice();
     }
 
     if (sinceFilter) {
@@ -38,7 +38,7 @@ const TodoList = ({ list }) => {
   }, [sinceFilter, toFilter, readyFilter, todoList]); // eslint-disable-line
 
   const updateItem = (id, newData) => {
-    const theItem = Utils.findById(list, id);
+    const theItem = Utils.findById(todoList, id);
     if (!theItem) {
       Utils.error('Item no encontrado');
     } else {

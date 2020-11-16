@@ -20,7 +20,7 @@ function App() {
 
   return (
     <AppContext.Provider value={{ todoList, setTodoList }}>
-      <Router basename="/to-do">
+      <Router>
         <div className="App">
           <div className="App-header">
             <AppHeader />

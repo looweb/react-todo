@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 
 import AppContext from 'AppContext';
 
@@ -11,11 +11,7 @@ const getFavList = (list) => {
 
 const Favorites = () => {
   const { todoList } = useContext(AppContext);
-  const [filteredList, setFilteredList] = useState(getFavList(todoList));
-
-  useEffect(() => {
-    setFilteredList(getFavList(todoList));
-  }, [todoList]);
+  const filteredList = getFavList(todoList);
 
   return (
     <PageLayout mainClassName="Favorites" title="Mis favoritos">
