@@ -27,7 +27,7 @@ function App() {
           </div>
           <Switch>
             <Route exact path="/" render={() => <All />} />
-            <Route exact path="/fav"} render={() => <Favorites />} />
+            <Route exact path="/fav" render={() => <Favorites />} />
           </Switch>
         </div>
       </Router>
