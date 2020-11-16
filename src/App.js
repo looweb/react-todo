@@ -26,8 +26,8 @@ function App() {
             <AppHeader />
           </div>
           <Switch>
-            <Route exact path={`${process.env.PUBLIC_URL}/`} render={() => <All />} />
-            <Route exact path={`${process.env.PUBLIC_URL}/fav`} render={() => <Favorites />} />
+            <Route exact path="/" render={() => <All />} />
+            <Route exact path="/fav"} render={() => <Favorites />} />
           </Switch>
         </div>
       </Router>
